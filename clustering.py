@@ -106,15 +106,7 @@ print(dataset_cluster_analyze)
 #analisa klaster
 clustering_analysis(dataset_cluster_analyze)
 
-print("\n\t\tKesimpulan : ")
-print("Klaster 0 :")
-print("Pada klaster ini, harga jual kembali relatif stabil. Tampaknya hal ini disebabkan dari data penjualan sebagai beriku:")
-print("- Penjual didominasi individu pemilik pertama")
-print("- KM berkendara relatif lebih rendah")
-print("Klaster 0 :")
-print("Pada klaster ini, harga jual kembali relatif lebih rendah dari pada klaster 0. Tampaknya hal ini disebabkan dari data penjualan sebagai beriku:")
-print("- Penjual didominasi individu, namun berasal tangan pemilik kedua dst")
-print("- KM berkendara relatif lebih tinggi")
-print("Dengan demikian penjualan dari tangan pertama dengan kilometer rendah memberikan harga jual kembali yang stabil. Namun tahun pembuatan motor tidak berpengaruh signifikan karena distribusi datanya merata")
+interpretasi  = open("data/interpretasi_cluster.txt", "r+")
+print("\n", interpretasi.read())
 
 dataset_normalized.to_csv('data/dataset/dataset.csv', index=False)  
